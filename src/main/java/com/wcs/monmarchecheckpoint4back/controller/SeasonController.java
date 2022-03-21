@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.wcs.monmarchecheckpoint4back.dto.SeasonDto;
-import com.wcs.monmarchecheckpoint4back.dto.VegetableDto;
 import com.wcs.monmarchecheckpoint4back.entity.Season;
-import com.wcs.monmarchecheckpoint4back.entity.Vegetable;
 import com.wcs.monmarchecheckpoint4back.repository.SeasonRepository;
 
 @RestController
