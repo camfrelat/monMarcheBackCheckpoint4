@@ -85,9 +85,19 @@ public class ShoppingListController {
 		if (optShoppingList.isEmpty()) {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 		}
+		
+		List<Vegetable> vegetables = new ArrayList();
+		for (Vegetable vegie : shoppingListDto.getVegetables()) {
+			// check if vegie exist
+			Vegetable vegetable = vegetableRepository.findById(vegie.getId())
+					.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+			vegetables.add(vegetable);
+		}
+	
 
 		ShoppingList shoppingList = optShoppingList.get();
 		shoppingList.setName(shoppingListDto.getName());
+		shoppingList.setVegetables(vegetables);
 
 		return shoppingListRepository.save(shoppingList);
 

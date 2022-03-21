@@ -12,30 +12,27 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Vegetable {
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
 	@NotBlank
 	private String name;
-	
-	//@ManyToOne
-	//@JoinColumn(name = "season_id", nullable = false)
-	//private Season season;
-	
-	@ManyToMany
-	@JoinTable(name = "vegetable_shoppingList", joinColumns = @JoinColumn(name = "vegetable_id"), inverseJoinColumns = @JoinColumn(name="shoppingList_id"))
+
+	@JsonIgnore
+	@ManyToMany(mappedBy = "vegetables")
 	private List<ShoppingList> shoppingLists;
-	
+
 	// Getters and Setters
 
 	public Long getId() {
 		return id;
 	}
-
 
 	public String getName() {
 		return name;
@@ -45,6 +42,12 @@ public class Vegetable {
 		this.name = name;
 	}
 
+	public List<ShoppingList> getShoppingLists() {
+		return shoppingLists;
+	}
 
+	public void setShoppingLists(List<ShoppingList> shoppingLists) {
+		this.shoppingLists = shoppingLists;
+	}
 
 }
