@@ -10,16 +10,16 @@ import javax.validation.constraints.NotBlank;
 import com.wcs.monmarchecheckpoint4back.entity.Vegetable;
 
 public class ShoppingListDto {
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
 	@NotBlank
 	private String name;
-	
+
 	private List<Vegetable> vegetables;
-	
+
 	// Getters and Setters
 
 	public Long getId() {
@@ -43,7 +43,8 @@ public class ShoppingListDto {
 	}
 
 	public void setVegetables(List<Vegetable> vegetables) {
-		this.vegetables = vegetables;
+		
+			this.vegetables = vegetables;
 	}
 
 }
