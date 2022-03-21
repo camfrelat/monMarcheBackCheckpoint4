@@ -3,10 +3,14 @@ package com.wcs.monmarchecheckpoint4back.entity;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotBlank;
 
@@ -25,7 +29,8 @@ public class ShoppingList {
     @CreationTimestamp
 	private LocalDateTime creationDate;
     
-    @ManyToMany(mappedBy = "shoppingLists")
+    @ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "vegetable_shoppingList", joinColumns = @JoinColumn(name = "shoppingList_id"), inverseJoinColumns = @JoinColumn(name = "vegetable_id"))
     private List<Vegetable> vegetables;
     
  // Getters and Setters
