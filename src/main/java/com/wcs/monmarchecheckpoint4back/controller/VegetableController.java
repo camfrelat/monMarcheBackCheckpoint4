@@ -32,7 +32,7 @@ public class VegetableController {
 	// Get all vegies
 	
 	@GetMapping
-	public List<Vegetable> getArticles() {
+	public List<Vegetable> getAll() {
 		return vegetableRepository.findAll();
 	}
 	
