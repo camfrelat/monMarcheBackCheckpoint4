@@ -22,9 +22,9 @@ public class Vegetable {
 	@NotBlank
 	private String name;
 	
-	@ManyToOne
-	@JoinColumn(name = "season_id", nullable = false)
-	private Season season;
+	//@ManyToOne
+	//@JoinColumn(name = "season_id", nullable = false)
+	//private Season season;
 	
 	@ManyToMany
 	@JoinTable(name = "vegetable_shoppingList", joinColumns = @JoinColumn(name = "vegetable_id"), inverseJoinColumns = @JoinColumn(name="shoppingList_id"))
@@ -45,13 +45,6 @@ public class Vegetable {
 		this.name = name;
 	}
 
-	public Season getSeason() {
-		return season;
-	}
 
-	public void setSeason(Season season) {
-		this.season = season;
-	}
-	
 
 }

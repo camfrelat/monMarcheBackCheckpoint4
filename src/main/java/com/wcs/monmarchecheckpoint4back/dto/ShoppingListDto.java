@@ -1,9 +1,13 @@
 package com.wcs.monmarchecheckpoint4back.dto;
 
+import java.util.List;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+
+import com.wcs.monmarchecheckpoint4back.entity.Vegetable;
 
 public class ShoppingListDto {
 	
@@ -13,6 +17,8 @@ public class ShoppingListDto {
 	
 	@NotBlank
 	private String name;
+	
+	private List<Vegetable> vegetables;
 	
 	// Getters and Setters
 
@@ -30,6 +36,14 @@ public class ShoppingListDto {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Vegetable> getVegetables() {
+		return vegetables;
+	}
+
+	public void setVegetables(List<Vegetable> vegetables) {
+		this.vegetables = vegetables;
 	}
 
 }

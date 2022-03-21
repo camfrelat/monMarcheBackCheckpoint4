@@ -53,6 +53,14 @@ public class ShoppingList {
 	public void setCreationDate(LocalDateTime creationDate) {
 		this.creationDate = creationDate;
 	}
+
+	public List<Vegetable> getVegetables() {
+		return vegetables;
+	}
+
+	public void setVegetables(List<Vegetable> vegetables) {
+		this.vegetables = vegetables;
+	}
 	
 	
 

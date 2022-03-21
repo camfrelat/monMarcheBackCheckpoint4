@@ -29,8 +29,8 @@ public class Season {
 	@NotNull
 	private LocalDate endDate;
 	
-	@OneToMany(mappedBy = "season")
-	 private List<Vegetable> vegetables = new ArrayList<>();
+	//@OneToMany(mappedBy = "season")
+	// private List<Vegetable> vegetables = new ArrayList<>();
 	
 	
 	// Getters and Setters
@@ -65,13 +65,5 @@ public class Season {
 	}
 
 
-	public List<Vegetable> getVegetables() {
-		return vegetables;
-	}
-
-
-	public void setVegetables(List<Vegetable> vegetables) {
-		this.vegetables = vegetables;
-	}
 
 }
