@@ -71,15 +71,16 @@ To get a local copy up and running follow these steps.
 
 - MySql
   ```sh
-  Create a database on MySql (database name : 'application properties file')
+  Create a database on MySql 
   ```
+ Database name and informations are in : 'application.properties' file in the 'ressources' folder.
    ```sh
   Create a user on the database
   ```
      ```sh
   Execute SQL script
   ```
-You can find the SQL script in the project ('vegetables.sql')
+You can find in the project the SQL script 'legumes.sql' in the folder 'sql'.
 
 ### Installation
 
