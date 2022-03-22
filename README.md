@@ -78,7 +78,7 @@ To get a local copy up and running follow these steps.
    ```sh
   Create a user on the database
   ```
-     ```sh 
+   ```sh 
      Execute SQL script
   ```
  
