@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import com.wcs.monmarchecheckpoint4back.entity.Vegetable;
 
@@ -16,6 +17,7 @@ public class ShoppingListDto {
 	private Long id;
 
 	@NotBlank
+    @Size(min = 2, max = 30)
 	private String name;
 
 	private List<Vegetable> vegetables;

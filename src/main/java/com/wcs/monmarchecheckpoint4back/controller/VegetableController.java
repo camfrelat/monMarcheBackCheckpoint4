@@ -6,8 +6,10 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,7 +35,7 @@ public class VegetableController {
 	
 	@GetMapping
 	public List<Vegetable> getAll() {
-		return vegetableRepository.findAll();
+		return vegetableRepository.findAll(Sort.by("name"));
 	}
 	
 	//Get vegie by ID
@@ -53,9 +55,17 @@ public class VegetableController {
 			
 			Vegetable vegetable = new Vegetable();
 			vegetable.setName(vegetableDto.getName());
+			vegetable.setDescription(vegetableDto.getDescription());
 		
 			
 			return vegetableRepository.save(vegetable);
+		}
+		
+		
+
+		@DeleteMapping("/{id}")
+		public void delete(@PathVariable(required = true) Long id) {
+			vegetableRepository.deleteById(id);
 		}
 		
 
