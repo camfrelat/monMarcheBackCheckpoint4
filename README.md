@@ -119,6 +119,8 @@ The lists can be modified and deleted.
 
 - [ ] Add seasons and more vegies
 - [ ] Add fruits
+- [ ] Admin back office
+- [ ] User authentification
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
