@@ -23,6 +23,8 @@ public class Vegetable {
 
 	@NotBlank
 	private String name;
+	
+	private String description;
 
 	@JsonIgnore
 	@ManyToMany(mappedBy = "vegetables")
@@ -48,6 +50,14 @@ public class Vegetable {
 
 	public void setShoppingLists(List<ShoppingList> shoppingLists) {
 		this.shoppingLists = shoppingLists;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }
