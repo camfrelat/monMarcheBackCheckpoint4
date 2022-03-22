@@ -1,0 +1,10 @@
+INSERT INTO vegetable (name, description) VALUES ("Artichaut", "Les poils beiges et crus à l’intérieur de l'artichaut sont en fait les fleurs avant qu’elles  ne soient matures. L’artichaut qu’on mange est un bouton de fleur"),
+("Poireau","Les poireaux contiennent une excellente source de vitamines du groupe B, dont la vitamine B6 qui joue un rôle énergétique, agit sur le système nerveux, aide à la formation de globules et peut agir contre la fatigue."),
+("Carotte", "La carotte représente, après la pomme de terre, le principal légume-racine cultivé dans le monde."),
+("Endive", "Légume léger et rafraîchissant (près de 95 % d'eau), l'endive apporte très peu de calories. Elle est riche en fibres qui lui donnent sa texture ferme et croquante et contribuent à la satiété."),
+("Brocoli", "Le brocoli est une variété de chou originaire de Sicile. Il fut sélectionné par les Romains à partir du chou sauvage."),
+("Topinambour", "Le topinambour, aussi appelé artichaut de Jérusalem, truffe du Canada ou soleil vivace, est une plante vivace de la famille des astéracées, dont l'espèce appartient au même genre que le tournesol"),
+("Aubergine", "Consommez la peau des aubergines qui contient des fibres et est riche en anti-oxydants. Afin de préserver ces qualités nutritionnelles, il vaut mieux la cuisiner avec un minimum de corps gras."), 
+("Courgette"," La courgette est un fruit courant en été, la fleur de courgette est aussi utilisée en cuisine."),
+("Epinard", "Éviter de conserver les épinards cuits durant plus de 24 heures (formation de nitrites nocifs pour la santé). Pour congeler, blanchir à partir de l'ébullition pendant 2 minutes, s'il est frais."),
+("Concombre", "Le concombre est botaniquement un fruit mais est consommé comme un légume. Il est de la même espèce que le cornichon, consommé lui comme condiment.")
